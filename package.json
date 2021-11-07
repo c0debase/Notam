@@ -14,15 +14,19 @@
     "lint:fix": "eslint \"**/*.{js,ts,jsx,tsx}\" --quiet --fix"
   },
   "dependencies": {
+    "@expo-google-fonts/lato": "^0.2.0",
+    "@expo-google-fonts/oswald": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "eslint-plugin-import": "^2.25.2",
     "expo": "~43.0.0",
+    "expo-font": "~10.0.3",
     "expo-status-bar": "~1.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.2",
     "react-native-paper": "^4.10.0",
+    "react-native-svg": "12.1.1",
     "react-native-web": "0.17.1",
     "styled-components": "^5.3.3",
     "typescript-eslint": "^0.0.1-alpha.0"
