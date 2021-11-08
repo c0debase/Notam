@@ -1,3 +1,4 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useState, useEffect, createContext } from "react";
 import { Item } from "react-native-paper/lib/typescript/components/List/List";
 import { favoritesRequest, favoritesTransform } from "./favorites.service";
@@ -19,6 +20,34 @@ export const FavoritesContextProvider = ({ children }) => {
     );
     setFavorites(newFavorites);
   };
+
+  const saveFavorites = async (value) => {
+    try {
+      const jsonValue = JSON.stringify(value);
+      await AsyncStorage.setItem("@favorites", jsonValue);
+    } catch (e) {
+      console.log("error storing faves", e);
+    }
+  };
+
+  const loadFavorites = async () => {
+    try {
+      const value = await AsyncStorage.getItem("@favorites");
+      if (value !== null) {
+        setFavorites(JSON.parse(value));
+      }
+    } catch (e) {
+      console.log("error loading faves", e);
+    }
+  };
+
+  useEffect(() => {
+    loadFavorites();
+  }, []);
+
+  useEffect(() => {
+    saveFavorites(favorites);
+  }, [favorites]);
 
   return (
     <FavoritesContext.Provider

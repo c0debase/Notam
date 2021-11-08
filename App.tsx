@@ -16,6 +16,9 @@ import { LocationContextProvider } from "./src/services/location/location.contex
 import { Navigation } from "./src/infrastructure/navigation";
 import { FavoritesContextProvider } from "./src/services/favorites/favorites.context";
 
+import * as Firebase from "firebase";
+import { initializeApp } from "firebase/app";
+
 export default function App() {
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
@@ -28,6 +31,17 @@ export default function App() {
   if (!oswaldLoaded || !latoLoaded) {
     return null;
   }
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAtj2NefohVYh_MMFtF1MqczZID-Ojs218",
+    authDomain: "notam-rn.firebaseapp.com",
+    projectId: "notam-rn",
+    storageBucket: "notam-rn.appspot.com",
+    messagingSenderId: "753315431130",
+    appId: "1:753315431130:web:41eb98ea4201b12e419be3",
+  };
+
+  initializeApp(firebaseConfig);
 
   return (
     <>

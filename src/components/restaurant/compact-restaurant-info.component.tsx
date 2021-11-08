@@ -26,8 +26,9 @@ const Item = styled.View`
 // <Image in Marker is buggy on android, as a workaround webview is used
 
 const isAndroid = Platform.OS === "android";
-const Image = isAndroid ? CompactWebview : CompactImage;
-export const CompactRestaurantInfo = ({ restaurant }) => {
+
+export const CompactRestaurantInfo = ({ restaurant, isMap }) => {
+  const Image = isAndroid && isMap ? CompactWebview : CompactImage;
   return (
     <>
       <Item>
