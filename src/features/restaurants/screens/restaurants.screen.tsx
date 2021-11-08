@@ -9,6 +9,7 @@ import { Spacer } from "../../../components/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
 import { Search } from "../components/search.component";
 import { Navigation } from "../../../infrastructure/navigation";
+import { FavoritesContext } from "../../../services/favorites/favorites.context";
 
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -28,6 +29,7 @@ const LoadingContainer = styled.View`
 
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, restaurants } = useContext(RestaurantsContext);
+  const { favorites } = useContext(FavoritesContext);
   return (
     <SafeArea>
       {isLoading && (
