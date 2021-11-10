@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "react-native";
@@ -7,12 +7,21 @@ import { RestaurantsNavigator } from "./restaurant.navigator";
 
 import { Ionicons } from "@expo/vector-icons";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { AuthenticationContext } from "../../services/authentication/authentication.context";
+import { Button } from "react-native-paper";
 
-const Settings = () => (
-  <SafeArea style={{ alignItems: "center", justifyContent: "center" }}>
-    <Text>Settings</Text>
-  </SafeArea>
-);
+const Settings = () => {
+  const { onLogout, user } = useContext(AuthenticationContext);
+
+  return (
+    <SafeArea style={{ alignItems: "center", justifyContent: "center" }}>
+      <Text>Settings{JSON.stringify(user)}</Text>
+      <Button title="logout" onPress={() => onLogout()}>
+        Logout
+      </Button>
+    </SafeArea>
+  );
+};
 
 const TAB_ICON = {
   Restaurants: "md-restaurant",

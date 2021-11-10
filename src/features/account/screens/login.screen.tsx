@@ -11,6 +11,9 @@ import {
   ErrorContainer,
   Title,
 } from "../components/account.styles";
+import { ActivityIndicator, Colors } from "react-native-paper";
+
+// TODO: Remove errors on screen change
 
 export const LoginScreen = ({ navigation }) => {
   const { error, onLogin, isLoading } = useContext(AuthenticationContext);
@@ -46,15 +49,19 @@ export const LoginScreen = ({ navigation }) => {
           </ErrorContainer>
         )}
         <Spacer size="large">
-          <AuthButton
-            icon="lock-open-outline"
-            mode="contained"
-            onPress={() => {
-              onLogin(email, password);
-            }}
-          >
-            Login
-          </AuthButton>
+          {!isLoading ? (
+            <AuthButton
+              icon="lock-open-outline"
+              mode="contained"
+              onPress={() => {
+                onLogin(email, password);
+              }}
+            >
+              Login
+            </AuthButton>
+          ) : (
+            <ActivityIndicator animating={true} color={Colors.blue300} />
+          )}
         </Spacer>
 
         <Spacer size="large">
