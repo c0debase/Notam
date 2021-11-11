@@ -12,19 +12,7 @@ import { Button } from "react-native-paper";
 import { FavoritesContextProvider } from "../../services/favorites/favorites.context";
 import { LocationContextProvider } from "../../services/location/location.context";
 import { RestaurantsContextProvider } from "../../services/restaurant/restaurants.context";
-
-const Settings = () => {
-  const { onLogout, user } = useContext(AuthenticationContext);
-
-  return (
-    <SafeArea style={{ alignItems: "center", justifyContent: "center" }}>
-      <Text>Settings{JSON.stringify(user)}</Text>
-      <Button title="logout" onPress={() => onLogout()}>
-        Logout
-      </Button>
-    </SafeArea>
-  );
-};
+import { SettingsNavigator } from "./settings.navigator";
 
 const TAB_ICON = {
   Restaurants: "md-restaurant",
@@ -57,7 +45,7 @@ export const AppNavigator = () => {
           <Tab.Navigator screenOptions={screenOptions}>
             <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
             <Tab.Screen name="Map" component={MapScreen} />
-            <Tab.Screen name="Settings" component={Settings} />
+            <Tab.Screen name="Settings" component={SettingsNavigator} />
           </Tab.Navigator>
         </RestaurantsContextProvider>
       </LocationContextProvider>

@@ -12,7 +12,7 @@ import { Navigation } from "../../../infrastructure/navigation";
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
 import { FavoritesBar } from "../../../components/favorites/favorites-bar.component";
 
-const RestaurantList = styled(FlatList).attrs({
+export const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
     padding: 16,
   },
