@@ -11,6 +11,7 @@ import { Search } from "../components/search.component";
 import { Navigation } from "../../../infrastructure/navigation";
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
 import { FavoritesBar } from "../../../components/favorites/favorites-bar.component";
+import { FadeInView } from "../../../components/animations/fade.animation";
 
 export const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -49,6 +50,7 @@ export const RestaurantsScreen = ({ navigation }) => {
       {isToggled && (
         <FavoritesBar favorites={favorites} onNavigate={navigation.navigate} />
       )}
+
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => (
@@ -58,7 +60,9 @@ export const RestaurantsScreen = ({ navigation }) => {
             }
           >
             <Spacer size="large" position="bottom">
-              <RestaurantInfoCard restaurant={item} />
+              <FadeInView>
+                <RestaurantInfoCard restaurant={item} />
+              </FadeInView>
             </Spacer>
           </TouchableOpacity>
         )}
