@@ -14,16 +14,16 @@ const Map = styled(MapView)`
 export const MapScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { restaurants = [] } = useContext(RestaurantsContext);
+
   const [latDelta, setLatDelta] = useState(0);
 
-  const { viewport, lat, lng } = location;
+  const { lat, lng, viewport } = location;
 
   useEffect(() => {
     const northeastLat = viewport.northeast.lat;
     const southwestLat = viewport.southwest.lat;
 
-    const latDelta = northeastLat - southwestLat;
-    setLatDelta(latDelta);
+    setLatDelta(northeastLat - southwestLat);
   }, [location, viewport]);
 
   return (
@@ -37,28 +37,26 @@ export const MapScreen = ({ navigation }) => {
           longitudeDelta: 0.02,
         }}
       >
-        {restaurants.map((restaurant, index) => {
+        {restaurants.map((restaurant) => {
           return (
-            <>
-              <MapView.Marker
-                key={restaurant.name}
-                title={restaurant.name}
-                coordinate={{
-                  latitude: restaurant.geometry.location.lat,
-                  longitude: restaurant.geometry.location.lng,
-                }}
+            <MapView.Marker
+              key={restaurant.name}
+              title={restaurant.name}
+              coordinate={{
+                latitude: restaurant.geometry.location.lat,
+                longitude: restaurant.geometry.location.lng,
+              }}
+            >
+              <MapView.Callout
+                onPress={() =>
+                  navigation.navigate("RestaurantDetail", {
+                    restaurant,
+                  })
+                }
               >
-                <MapView.Callout
-                  onPress={() => {
-                    navigation.navigate("RestaurantDetail", {
-                      restaurant,
-                    });
-                  }}
-                >
-                  <MapCallout restaurant={restaurant}></MapCallout>
-                </MapView.Callout>
-              </MapView.Marker>
-            </>
+                <MapCallout restaurant={restaurant} />
+              </MapView.Callout>
+            </MapView.Marker>
           );
         })}
       </Map>

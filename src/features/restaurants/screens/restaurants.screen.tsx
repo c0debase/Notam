@@ -12,6 +12,8 @@ import { Navigation } from "../../../infrastructure/navigation";
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
 import { FavoritesBar } from "../../../components/favorites/favorites-bar.component";
 import { FadeInView } from "../../../components/animations/fade.animation";
+import { LocationContext } from "../../../services/location/location.context";
+import { Text } from "../../../components/typography/text.component";
 
 export const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -30,9 +32,11 @@ const LoadingContainer = styled.View`
 `;
 
 export const RestaurantsScreen = ({ navigation }) => {
-  const { isLoading, restaurants } = useContext(RestaurantsContext);
+  const { isLoading, restaurants, error } = useContext(RestaurantsContext);
+  const { error: locationError } = useContext(LocationContext);
   // const { favorites } = useContext(FavoritesContext);
   const [isToggled, setIsToggled] = useState(false);
+  const hasError = error || locationError;
 
   const { favorites } = useContext(FavoritesContext);
 
@@ -50,7 +54,11 @@ export const RestaurantsScreen = ({ navigation }) => {
       {isToggled && (
         <FavoritesBar favorites={favorites} onNavigate={navigation.navigate} />
       )}
-
+      {hasError && (
+        <Spacer position="left" size="large">
+          <Text variant="error">Unable to retrieve data</Text>
+        </Spacer>
+      )}
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => (
