@@ -1,0 +1,241 @@
+[debug] [2021-11-13T15:39:34.181Z] ----------------------------------------------------------------------
+[debug] [2021-11-13T15:39:34.183Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2021-11-13T15:39:34.183Z] CLI Version:   9.22.0
+[debug] [2021-11-13T15:39:34.184Z] Platform:      darwin
+[debug] [2021-11-13T15:39:34.184Z] Node Version:  v14.18.1
+[debug] [2021-11-13T15:39:34.184Z] Time:          Sat Nov 13 2021 10:39:34 GMT-0500 (Eastern Standard Time)
+[debug] [2021-11-13T15:39:34.185Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-13T15:39:34.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-13T15:39:34.230Z] > authorizing via signed-in user (vadimabramovapps@gmail.com)
+[debug] [2021-11-13T15:39:34.230Z] [iam] checking project notam-rn for permissions ["firebase.projects.get"]
+[debug] [2021-11-13T15:39:34.232Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-13T15:39:34.232Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-13T15:39:34.326Z] <<< HTTP RESPONSE 200 {"date":"Sat, 13 Nov 2021 15:39:34 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-13T15:39:34.377Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notam-rn:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-11-13T15:39:34.573Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 13 Nov 2021 15:39:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=128","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-13T15:39:34.592Z] [functions] Using node@14 from host.
+[debug] [2021-11-13T15:39:34.593Z] defaultcredentials: writing to file /Users/v/.config/firebase/vadimabramovapps_gmail_com_application_default_credentials.json
+[debug] [2021-11-13T15:39:34.596Z] DEBUG: Setting GAC to /Users/v/.config/firebase/vadimabramovapps_gmail_com_application_default_credentials.json
+[debug] [2021-11-13T15:39:34.598Z] > refreshing access token with scopes: []
+[debug] [2021-11-13T15:39:34.598Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-13T15:39:34.655Z] <<< HTTP RESPONSE 200 {"date":"Sat, 13 Nov 2021 15:39:34 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-13T15:39:34.705Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/notam-rn/adminSdkConfig [none]
+[debug] [2021-11-13T15:39:35.010Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/notam-rn/adminSdkConfig 200
+[debug] [2021-11-13T15:39:35.010Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/notam-rn/adminSdkConfig {"projectId":"notam-rn","storageBucket":"notam-rn.appspot.com"}
+[debug] [2021-11-13T15:39:35.039Z] [functions] Watching "/Users/v/Desktop/Projects/Notam/functions" for Cloud Functions...
+[debug] [2021-11-13T15:39:35.049Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-11-13T15:39:35.050Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-11-13T15:39:35.050Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-11-13T15:39:35.050Z] DEBUG: [worker-~diagnostic~-8323256f-1da6-44eb-a8f1-9caa19cee819]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31971.sock
+[debug] [2021-11-13T15:39:35.050Z] DEBUG: [worker-~diagnostic~-8323256f-1da6-44eb-a8f1-9caa19cee819]: BUSY
+[debug] [2021-11-13T15:39:35.166Z] DEBUG: [runtime-status] [31971] Functions runtime initialized. {"cwd":"/Users/v/Desktop/Projects/Notam/functions","node_version":"14.18.1"}
+[debug] [2021-11-13T15:39:35.166Z] DEBUG: [runtime-status] [31971] Disabled runtime features: undefined
+[debug] [2021-11-13T15:39:35.168Z] DEBUG: [runtime-status] [31971] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:35.171Z] DEBUG: [runtime-status] [31971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.172Z] DEBUG: [runtime-status] [31971] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-11-13T15:39:35.173Z] DEBUG: [runtime-status] [31971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.198Z] DEBUG: [runtime-status] [31971] Checked functions.config() {"config":{}}
+[debug] [2021-11-13T15:39:35.199Z] DEBUG: [runtime-status] [31971] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-11-13T15:39:35.199Z] DEBUG: [runtime-status] [31971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.200Z] DEBUG: [runtime-status] [31971] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:35.200Z] DEBUG: [runtime-status] [31971] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.200Z] DEBUG: [runtime-status] [31971] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-11-13T15:39:35.207Z] [functions[us-central1-geocode]] http function initialized (http://localhost:5001/notam-rn/us-central1/geocode).
+[debug] [2021-11-13T15:39:35.207Z] [functions[us-central1-placesNearby]] http function initialized (http://localhost:5001/notam-rn/us-central1/placesNearby).
+[info] i  functions: Loaded functions: geocode, placesNearby 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage 
+[debug] [2021-11-13T15:39:35.215Z] DEBUG: [worker-~diagnostic~-8323256f-1da6-44eb-a8f1-9caa19cee819]: IDLE
+[debug] [2021-11-13T15:39:35.270Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:39:35.270Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:39:35.270Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:39:35.276Z] DEBUG: [worker-pool] addWorker(us-central1-placesNearby)
+[debug] [2021-11-13T15:39:35.277Z] DEBUG: [worker-pool] Adding worker with key us-central1-placesNearby, total=1
+[debug] [2021-11-13T15:39:35.277Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:39:35.277Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:35.277Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:39:35.399Z] DEBUG: [runtime-status] [31973] Functions runtime initialized. {"cwd":"/Users/v/Desktop/Projects/Notam/functions","node_version":"14.18.1"}
+[debug] [2021-11-13T15:39:35.400Z] DEBUG: [runtime-status] [31973] Disabled runtime features: undefined
+[debug] [2021-11-13T15:39:35.401Z] DEBUG: [runtime-status] [31973] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:35.405Z] DEBUG: [runtime-status] [31973] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.407Z] DEBUG: [runtime-status] [31973] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-11-13T15:39:35.408Z] DEBUG: [runtime-status] [31973] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.436Z] DEBUG: [runtime-status] [31973] Checked functions.config() {"config":{}}
+[debug] [2021-11-13T15:39:35.436Z] DEBUG: [runtime-status] [31973] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-11-13T15:39:35.437Z] DEBUG: [runtime-status] [31973] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.437Z] DEBUG: [runtime-status] [31973] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:35.438Z] DEBUG: [runtime-status] [31973] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:35.438Z] DEBUG: [runtime-status] [31973] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-11-13T15:39:35.442Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:39:35.443Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:39:35.443Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:39:35.443Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:39:35.445Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:35.447Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:39:35.448Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:39:35.452Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:39:35.459Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:39:35.461Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:39:35.462Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:39:35.462Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:39:44.832Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:39:44.833Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:39:44.833Z] Accepted request GET /notam-rn/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2021-11-13T15:39:44.840Z] DEBUG: [worker-pool] addWorker(us-central1-geocode)
+[debug] [2021-11-13T15:39:44.841Z] DEBUG: [worker-pool] Adding worker with key us-central1-geocode, total=1
+[debug] [2021-11-13T15:39:44.841Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-geocode)
+[debug] [2021-11-13T15:39:44.841Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31994.sock
+[debug] [2021-11-13T15:39:44.841Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: BUSY
+[debug] [2021-11-13T15:39:44.981Z] DEBUG: [runtime-status] [31994] Functions runtime initialized. {"cwd":"/Users/v/Desktop/Projects/Notam/functions","node_version":"14.18.1"}
+[debug] [2021-11-13T15:39:44.982Z] DEBUG: [runtime-status] [31994] Disabled runtime features: undefined
+[debug] [2021-11-13T15:39:44.984Z] DEBUG: [runtime-status] [31994] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:44.986Z] DEBUG: [runtime-status] [31994] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:44.987Z] DEBUG: [runtime-status] [31994] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-11-13T15:39:44.988Z] DEBUG: [runtime-status] [31994] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:45.017Z] DEBUG: [runtime-status] [31994] Checked functions.config() {"config":{}}
+[debug] [2021-11-13T15:39:45.018Z] DEBUG: [runtime-status] [31994] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-11-13T15:39:45.018Z] DEBUG: [runtime-status] [31994] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:45.019Z] DEBUG: [runtime-status] [31994] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-11-13T15:39:45.019Z] DEBUG: [runtime-status] [31994] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-11-13T15:39:45.019Z] DEBUG: [runtime-status] [31994] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/v/Desktop/Projects/Notam/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-11-13T15:39:45.024Z] DEBUG: [runtime-status] [31994] Trigger "us-central1-geocode" has been found, beginning invocation!
+[debug] [2021-11-13T15:39:45.024Z] [functions] Beginning execution of "us-central1-geocode"
+[debug] [2021-11-13T15:39:45.024Z] DEBUG: [runtime-status] [31994] triggerDefinition {"httpsTrigger":{},"name":"geocode","entryPoint":"geocode","regions":["us-central1"],"region":"us-central1","id":"us-central1-geocode"}
+[debug] [2021-11-13T15:39:45.024Z] DEBUG: [runtime-status] [31994] Running us-central1-geocode in signature http
+[debug] [2021-11-13T15:39:45.027Z] DEBUG: [runtime-status] [31994] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31994.sock
+[debug] [2021-11-13T15:39:45.028Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:39:45.029Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco
+[debug] [2021-11-13T15:39:45.034Z] DEBUG: [runtime-status] [31994] Ephemeral server handling GET request
+[debug] [2021-11-13T15:39:45.039Z] DEBUG: [runtime-status] [31994] Ephemeral server survived.
+[debug] [2021-11-13T15:39:45.042Z] [functions] Finished "us-central1-geocode" in ~1s
+[debug] [2021-11-13T15:39:45.042Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: IDLE
+[debug] [2021-11-13T15:39:45.042Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:39:45.061Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:39:45.061Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:39:45.061Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:39:45.062Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:39:45.062Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:45.062Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:39:45.063Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:39:45.063Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:39:45.063Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:39:45.063Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:39:45.064Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:45.065Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:39:45.066Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:39:45.068Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:39:45.069Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:39:45.070Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:39:45.070Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:39:45.070Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:39:55.835Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:39:55.835Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:39:55.835Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:39:55.835Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:39:55.836Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:55.836Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:39:55.836Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:39:55.836Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:39:55.836Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:39:55.836Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:39:55.837Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:39:55.837Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:39:55.837Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:39:55.838Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:39:55.839Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:39:55.840Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:39:55.840Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:39:55.840Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:40:00.309Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:40:00.310Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:40:00.310Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:40:00.310Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:40:00.310Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:00.310Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:40:00.311Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:40:00.311Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:40:00.311Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:40:00.311Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:40:00.311Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:00.312Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:40:00.312Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:40:00.315Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:40:00.317Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:40:00.317Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:40:00.317Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:40:00.318Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:40:14.274Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:40:14.274Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:40:14.274Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:40:14.274Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:40:14.275Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:14.275Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:40:14.275Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:40:14.275Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:40:14.275Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:40:14.275Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:40:14.276Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:14.276Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:40:14.276Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:40:14.278Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:40:14.279Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:40:14.279Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:40:14.279Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:40:14.279Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:40:44.951Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:40:44.951Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:40:44.952Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:40:44.952Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:40:44.952Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:44.952Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:40:44.952Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-11-13T15:40:44.952Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-11-13T15:40:44.952Z] Accepted request GET /notam-rn/us-central1/geocode?city=san%20francisco --> us-central1-geocode
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-geocode)
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31994.sock
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: BUSY
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:40:44.953Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:40:44.953Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:44.954Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:40:44.954Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:40:44.954Z] DEBUG: [runtime-status] [31994] Trigger "us-central1-geocode" has been found, beginning invocation!
+[debug] [2021-11-13T15:40:44.954Z] [functions] Beginning execution of "us-central1-geocode"
+[debug] [2021-11-13T15:40:44.954Z] DEBUG: [runtime-status] [31994] triggerDefinition {"httpsTrigger":{},"name":"geocode","entryPoint":"geocode","regions":["us-central1"],"region":"us-central1","id":"us-central1-geocode"}
+[debug] [2021-11-13T15:40:44.955Z] DEBUG: [runtime-status] [31994] Running us-central1-geocode in signature http
+[debug] [2021-11-13T15:40:44.955Z] DEBUG: [runtime-status] [31994] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31994.sock
+[debug] [2021-11-13T15:40:44.955Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:40:44.955Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/geocode?city=san%20francisco, mapping to path=/?city=san%20francisco
+[debug] [2021-11-13T15:40:44.956Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:40:44.956Z] DEBUG: [runtime-status] [31994] Ephemeral server handling GET request
+[debug] [2021-11-13T15:40:44.957Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:40:44.958Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:40:44.958Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:40:44.958Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:40:44.959Z] DEBUG: [runtime-status] [31994] Ephemeral server survived.
+[debug] [2021-11-13T15:40:44.959Z] [functions] Finished "us-central1-geocode" in ~1s
+[debug] [2021-11-13T15:40:44.959Z] DEBUG: [worker-us-central1-geocode-b1527ea1-e0b0-4564-9ca9-7980c5095853]: IDLE
+[debug] [2021-11-13T15:40:44.959Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-11-13T15:40:45.177Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-11-13T15:40:45.177Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-11-13T15:40:45.177Z] Accepted request GET /notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155 --> us-central1-placesNearby
+[debug] [2021-11-13T15:40:45.177Z] DEBUG: [worker-pool] submitWork(triggerId=us-central1-placesNearby)
+[debug] [2021-11-13T15:40:45.178Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: Assigning socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:45.178Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: BUSY
+[debug] [2021-11-13T15:40:45.178Z] DEBUG: [runtime-status] [31973] Trigger "us-central1-placesNearby" has been found, beginning invocation!
+[debug] [2021-11-13T15:40:45.178Z] [functions] Beginning execution of "us-central1-placesNearby"
+[debug] [2021-11-13T15:40:45.178Z] DEBUG: [runtime-status] [31973] triggerDefinition {"httpsTrigger":{},"name":"placesNearby","entryPoint":"placesNearby","regions":["us-central1"],"region":"us-central1","id":"us-central1-placesNearby"}
+[debug] [2021-11-13T15:40:45.178Z] DEBUG: [runtime-status] [31973] Running us-central1-placesNearby in signature http
+[debug] [2021-11-13T15:40:45.179Z] DEBUG: [runtime-status] [31973] Attempting to listen to socketPath: /var/folders/97/m51_hqld6nl052bbj94wk9_00000gn/T/fire_emu_31973.sock
+[debug] [2021-11-13T15:40:45.179Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-11-13T15:40:45.179Z] DEBUG: [functions] Got req.url=/notam-rn/us-central1/placesNearby?location=37.7749295,-122.4194155, mapping to path=/?location=37.7749295,-122.4194155
+[debug] [2021-11-13T15:40:45.180Z] DEBUG: [runtime-status] [31973] Ephemeral server handling GET request
+[debug] [2021-11-13T15:40:45.181Z] DEBUG: [runtime-status] [31973] Ephemeral server survived.
+[debug] [2021-11-13T15:40:45.181Z] [functions] Finished "us-central1-placesNearby" in ~1s
+[debug] [2021-11-13T15:40:45.181Z] DEBUG: [worker-us-central1-placesNearby-c8b0c979-449b-47b7-80cc-0afa814118c9]: IDLE
+[debug] [2021-11-13T15:40:45.182Z] [work-queue] {"queueLength":0,"workRunningCount":0}
