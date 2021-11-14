@@ -15,4 +15,4 @@ web-build/
 
 test.js
 */node_modules/**/*
-
+functions/firebase-debug.log
